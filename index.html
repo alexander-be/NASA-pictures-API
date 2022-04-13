@@ -1,16 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NASA API Pictures</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://s2.googleusercontent.com/s2/favicons?domain=www.nasa.gov"
+    />
     <!-- ZTM Favicon -->
     <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
-</head>
-<body>
+  </head>
+  <body>
+    <!-- loader -->
+    <div class="loader hidden">
+      <img src="cloud.svg" alt="Cloud Loading Animation" />
+    </div>
+    <!-- container -->
+    <div class="container">
+      <!-- navigation -->
+      <div class="navigation-container">
+        <span class="background"></span>
+        <!-- results nav -->
+        <span class="navigation-items" id="resultsNav">
+          <h3 class="clickable">Favourites</h3>
+          <h3>&nbsp;&nbsp;&nbsp;•&nbsp;&nbsp;&nbsp;</h3>
+          <h3 class="clickable">Load More</h3>
+        </span>
+        <!-- Favourites Nav -->
+        <span class="navigation-items hidden" id="favouritesNav">
+          <h3 class="clickable">Load More NASA Images</h3>
+        </span>
+      </div>
+      <!-- images container -->
+      <div class="images-container">
+        <div class="card">
+          <a href="" title="View Full Image" target="_blank">
+            <img
+              src="https://apod.nasa.gov/apod/image/2204/DevilsWay_Kiczenski_1402.jpg"
+              alt="NASA Picture of the Day"
+              class="card-img-top"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">Title of Image</h5>
+            <p class="clickable">Add to Favourites</p>
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Et
+              consequatur aperiam vitae aliquid repellendus numquam,
+              exercitationem adipisci minima explicabo necessitatibus ea eius
+              nihil voluptatum rerum, iusto harum eveniet libero maiores?Lorem
+              ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptates
+              doloremque impedit fugiat voluptate sapiente veniam architecto
+              dolorem laudantium! Consequuntur impedit voluptas cum voluptatem?
+              Illum, eos! Optio nemo deserunt ut?
+            </p>
+            <small class="text-muted">
+              <strong>12-12-2020</strong>
+              <span>Copyright Info</span>
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- save confirmation -->
+    <div class="save-confirmed hidden">
+      <h1>ADDED!</h1>
+    </div>
     <!-- Script -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
